@@ -1,0 +1,27 @@
+services:
+  web:
+    build: .
+    container_name: yii1_web
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    networks:
+      - yii1_network
+
+  db:
+    image: mysql:5.7
+    container_name: yii1_db
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: yii1_database
+    volumes:
+      - ./emp.sql:/docker-entrypoint-initdb.d/emp.sql
+    ports:
+      - "3306:3306"
+    networks:
+      - yii1_network
+
+networks:
+  yii1_network:
+    driver: bridge

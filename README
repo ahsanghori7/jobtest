@@ -1,0 +1,28 @@
+# Yii 1.1 Project with Docker and PHPUnit
+
+This project is a Yii 1.1 application running inside Docker. Below you'll find the instructions for setting up, running tests, and debugging the application.
+
+## Prerequisites
+
+- Docker
+- Docker Compose
+- PHP 5.6 (Docker image used in this project)
+- Composer
+
+## Setting Up the Project
+
+### 1. Clone the Repository
+
+First, clone the repository to your local machine:
+
+git clone https://github.com/your-repository.git
+cd your-repository
+
+- docker-compose build
+
+- docker-compose up -d
+
+open http://localhost:8080/jobtest/index.php
+
+email ahsan@gmail.com
+password 123
